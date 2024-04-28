@@ -1,0 +1,34 @@
+def check(a):
+    if a<18.5:
+        print("Under Weight")
+    elif a>18.5 and a<24.9:
+        print("Healthy Weight")
+    elif(a>25) and (a<29.9):
+        print("Over Weight")
+    elif(a>30):
+        print("Obese")
+def metric():
+
+    a=float(input("Give your height in M:-"))
+    b=float(input("Give your weight in kg:-"))
+    weight=a*a
+    c=(b/weight)
+    cd=(f'Your BMI in metric measurement is {c:.2f}.')
+    print(cd)
+    check(c)
+def imperial():
+    a = float(input("Give your height in inch :-"))
+    b = float(input("Give your weight in lb [1lb=0.453kg]:-"))
+    a = a * a
+    d=703
+    aa=(b/a)*703
+    c = (f'Your BMI in imperial measurement is {aa:.2f}')
+    print(c)
+    check(aa)
+a=int(input("1.METRIC MEASUREMENT\n2.IMPERIAL MEASUREMENT\nGive your choice of input to find your BMI:-"))
+if a==1:
+    metric()
+elif a==2:
+    imperial()
+else:
+    print("Give value properly")
